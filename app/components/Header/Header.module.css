@@ -1,0 +1,47 @@
+.container {
+    display: flex;
+    height: calc(60 / 1440 * 100vw);
+    padding: calc(20 / 1440 * 100vw);
+    align-items: center;
+    background: #fff;
+    font-size: calc(12 / 1440 * 100vw);
+    border-bottom: var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    width: calc(120 / 1440 * 100vw);
+    height: auto;
+}
+
+
+.knowledgeCentre {
+    color: #26b3ff;
+    margin-left: calc(8 / 1440 * 100vw);
+    margin-right: auto;
+}
+
+.itemsContainer {
+    display: flex;
+    gap: calc(40 / 1440 * 100vw);
+}
+
+.button {
+    text-transform: capitalize;
+    font-weight: normal;
+    font-size: calc(12 / 1440 * 100vw);
+    cursor: pointer;
+    transition: var(--allTransition);
+}
+
+.button:hover {
+    text-decoration: line-through;
+}
+
+.padded {
+    padding: calc(5 / 1440 * 100vw) calc(10 / 1440 * 100vw);
+    border-radius: calc(10 / 1440 * 100vw);
+    height: calc(34 / 1440 * 100vw);
+}

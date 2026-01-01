@@ -1,26 +1,78 @@
-@import "tailwindcss";
-
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  color: #2e2e2e;
+  background-color: #ffffff;
+  --allTransition: 0.5s all;
+  --opacity: 0.5;
+  --boxShadow: 0 4px 4px 0 #00000040;
+  --background: #2e2e2e;
+  --paneColor: #b5c7cb;
+  --paneHover: rgba(70, 70, 70, 0.23);
+  --description: #6d6b76;
+  --lightOutline: #e9e9e9;
+  --blue: #4da0ff;
+  --border: calc(.5 / 1440 * 100vw) solid #d7d7d7c6;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@font-face {
+  font-family: 'Aeonik';
+  src: url('./fonts/aeonik/AeonikTRIAL-Regular.otf');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Aeonik';
+  src: url('./fonts/aeonik/AeonikTRIAL-Bold.otf');
+  font-weight: bold;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Aeonik";
+  font-size: calc(14 / 1440 * 100vw);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button,
+input,
+textarea,
+select {
+  font-size: calc(14 / 1440 * 100vw);
+  font-family: "Aeonik";
+  resize: none;
+  outline: none;
+  border: none;
+  background: none;
+}
+
+input::placeholder,
+textarea::placeholder,
+select::placeholder {
+  font-family: "Aeonik";
+  font-size: calc(12 / 1440 * 100vw);
+  color: #999;
+}
+
+
+@media screen and (max-width: 540px) {
+  body {
+    font-size: calc(14 / 414 * 100vw);
+  }
+
+  button,
+  input,
+  select,
+  textarea,
+  input::placeholder,
+  textarea::placeholder,
+  select::placeholder {
+    font-size: calc(14 / 414 * 100vw);
+  }
 }

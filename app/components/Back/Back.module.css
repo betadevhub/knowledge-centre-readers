@@ -1,0 +1,14 @@
+.container {
+    padding: calc(10 / 1440 * 100vw);
+    margin-bottom: calc(10 / 1440 * 100vw);
+    border-radius: calc(10 / 1440 * 100vw);
+    border: var(--border);
+    display: flex;
+    align-items: center;
+    gap: calc(5 / 1440 * 100vw);
+    color: var(--description);
+}
+
+.icon{
+    font-size: calc(18 / 1440 * 100vw);
+}

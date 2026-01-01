@@ -1,0 +1,19 @@
+.flexWrapperContainer {
+    display: flex;
+    flex-direction: column;
+    gap: calc(73 / 1440 * 100vw);
+}
+
+.mainWrapper {
+    display: flex;
+    align-items: flex-start;
+    overflow: auto;
+    height: calc(100vh - calc(60 / 1440 * 100vw));
+}
+
+.categoryWrapper {
+    width: calc(100% - calc(215 / 1440 * 100vw));
+    height: calc(100vh - calc(60 / 1440 * 100vw));
+    background: #fff;
+    padding: calc(38 / 1440 * 100vw);
+}

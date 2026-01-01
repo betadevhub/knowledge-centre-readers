@@ -1,0 +1,18 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: calc(7.9 / 1440 * 100vw);
+}
+
+
+.title {
+    font-size: calc(24 / 1440 * 100vw);
+    font-weight: bold;
+    line-height: calc((0.96 * 24) / 1440 * 100vw);
+    text-transform: capitalize;
+}
+
+.description {
+    font-size: calc(12.5 / 1440 * 100vw);
+    color: var(--description);
+}

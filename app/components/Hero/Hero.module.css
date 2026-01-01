@@ -1,0 +1,30 @@
+.container {
+    width: 100vw;
+    background: var(--background);
+    color: #fff;
+    height: calc(326 / 1440 * 100vw);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container h3 {
+    font-size: calc(24 / 1440 * 100vw);
+    font-weight: bold;
+    color: #f7f6f4;
+}
+
+.container h3 span {
+    color: #4da0ff;
+}
+
+
+.container p {
+    width: calc(900 / 1440 * 100vw);
+    margin-top: calc(10 / 1440 * 100vw);
+    margin-bottom: calc(25 / 1440 * 100vw);
+    color: #ffffff9d;
+    font-weight: normal;
+}
