@@ -7,6 +7,12 @@
     align-items: center;
     gap: calc(5 / 1440 * 100vw);
     color: var(--description);
+    cursor: pointer;
+    transition: var(--allTransition);
+}
+
+.container:hover{
+    opacity: var(--opacity);
 }
 
 .icon{

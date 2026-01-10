@@ -36,7 +36,8 @@
     transition: var(--allTransition);
 }
 
-.button:hover {
+.button:hover,
+.activeRoute {
     text-decoration: line-through;
 }
 
@@ -45,3 +46,84 @@
     border-radius: calc(10 / 1440 * 100vw);
     height: calc(34 / 1440 * 100vw);
 }
+
+.activeRoute {
+    color: var(--blue);
+}
+
+.dropdownContainer {
+    /* background: var(--background); */
+    /* color: #fff; */
+    background: #fcfcfc;
+    position: absolute;
+    top: calc(60 / 1440 * 100vw);
+    padding: calc(30 / 1440 * 100vw);
+    width: 70%;
+    right: calc(20 / 1440 * 100vw);
+    border-radius: calc(10 / 1440 * 100vw);
+    box-shadow: 0 calc(4 / 1440 * 100vw) calc(20 / 1440 * 100vw) rgba(0, 0, 0, 0.1),
+        0 calc(2 / 1440 * 100vw) calc(8 / 1440 * 100vw) rgba(0, 0, 0, 0.06);
+
+
+}
+
+.dropdownContent {
+    display: flex;
+    flex-wrap: wrap;
+    gap: calc(15 / 1440 * 100vw);
+}
+
+
+
+.dropdownItem {
+    background: #fff;
+    border: var(--border);
+    padding: calc(15 / 1440 * 100vw) calc(15 / 1440 * 100vw);
+    border-radius: calc(15 / 1440 * 100vw);
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: var(--allTransition);
+}
+
+.dropdownItem:hover {
+    box-shadow: 0 calc(4 / 1440 * 100vw) calc(20 / 1440 * 100vw) rgba(0, 0, 0, 0.1),
+        0 calc(2 / 1440 * 100vw) calc(8 / 1440 * 100vw) rgba(0, 0, 0, 0.06);
+    background: var(--blue);
+    color: #fff;
+}
+
+.dropdownItem:hover .dropdownIcon {
+    color: var(--blue);
+    box-shadow: 0 calc(4 / 1440 * 100vw) calc(20 / 1440 * 100vw) rgba(0, 0, 0, 0.1),
+        0 calc(2 / 1440 * 100vw) calc(8 / 1440 * 100vw) rgba(0, 0, 0, 0.06);
+}
+
+.fContainer {
+    display: flex;
+    flex-direction: column;
+    gap: calc(5 / 1440 * 100vw);
+    margin-bottom: calc(20 / 1440 * 100vw);
+}
+
+.fContainer h3 {
+    font-size: calc(16 / 1440 * 100vw);
+}
+
+.fContainer p {
+    font-size: calc(14 / 1440 * 100vw);
+}
+
+.dropdownIcon {
+    background: #fff;
+    border: var(--border);
+    border-radius: calc(10 / 1440 * 100vw);
+    width: calc(40 / 1440 * 100vw);
+    height: calc(40 / 1440 * 100vw);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+

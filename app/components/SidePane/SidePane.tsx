@@ -5,7 +5,7 @@ import { formatCategories } from './helper';
 import { useEffect } from 'react';
 import useNavigation from '@/app/hooks/navigation';
 import { useCategories } from '@/app/stateManagement/useCategories';
-import { usePathname, useRouter } from 'next/navigation';
+import { useParams, usePathname, useRouter } from 'next/navigation';
 import { routes } from '@/app/constants/util';
 import { HiOutlineRefresh } from 'react-icons/hi';
 
@@ -14,6 +14,8 @@ export default function SidePane() {
     const { categoriesResult, getCategoriesResult, loadingCategoriesResult } = useCategories();
     const path = usePathname();
     const router = useRouter();
+    const { name, id } = useParams()
+    console.log(useParams())
 
     const getRoute = async () => {
         const r = await getCategoriesResult({ sort: '+name' });
@@ -22,8 +24,8 @@ export default function SidePane() {
         }
     }
     useEffect(() => {
-        path.startsWith(routes.categories) && getRoute()
-    }, [path])
+        !name && !id && path.startsWith(routes.categories) && getRoute()
+    }, [name, id, path])
 
 
 

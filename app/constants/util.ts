@@ -16,6 +16,7 @@ export const functionTypes = {
 
 
 export const URL = process.env.NEXT_PUBLIC_BASE_URL;
+export const FRONTEND_URL = process.env.NEXT_PUBLIC_FRONTEND_URL;
 export const withCredentials = { withCredentials: true }
 
 export const youtubeRegex = /^(https?:\/\/)?(www\.)?(youtube\.com|youtu\.?be)\/.+$/;

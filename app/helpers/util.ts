@@ -75,3 +75,4 @@ export const minutesFormat = (seconds: number) => {
 
     return `${totalMinutes} minute${totalMinutes > 1 ? 's' : ''}`;
 };
+

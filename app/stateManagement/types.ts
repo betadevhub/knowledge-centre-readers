@@ -44,3 +44,8 @@ export interface USE_CONTENTS {
 }
 
 
+export interface USE_COPY {
+    handleCopyToClipboard: (text: string) => void;
+}
+
+
