@@ -32,7 +32,7 @@ export interface USE_CATEGORIES {
 export interface USE_POSTS {
     loadingPosts: boolean;
     postResult: POST_RESULT | null;
-    getPost: (filter: BUILD_FILTER) => Promise<string | undefined>;
+    getPost: (filter: BUILD_FILTER) => Promise<void>;
 }
 
 
