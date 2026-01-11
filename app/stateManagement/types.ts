@@ -40,7 +40,7 @@ export interface USE_POSTS {
 export interface USE_CONTENTS {
     loadingContentResult: boolean;
     contentResult: CONTENT_RESULT | null;
-    getContent: (filter: BUILD_FILTER) => Promise<string | undefined>;
+    getContent: (filter: BUILD_FILTER) => Promise<void>;
 }
 
 
