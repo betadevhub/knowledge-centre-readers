@@ -16,7 +16,6 @@
     height: auto;
 }
 
-
 .knowledgeCentre {
     color: #26b3ff;
     margin-left: calc(8 / 1440 * 100vw);
@@ -26,6 +25,11 @@
 .itemsContainer {
     display: flex;
     gap: calc(40 / 1440 * 100vw);
+}
+
+/* Button wrapper for positioning */
+.buttonWrapper {
+    position: relative;
 }
 
 .button {
@@ -51,20 +55,53 @@
     color: var(--blue);
 }
 
+/* Dropdown specific styles */
+.dropdownWrapper {
+    position: relative;
+}
+
+/* Hide dropdown by default */
+.dropdownWrapper .dropdownContainer {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease-in-out;
+    pointer-events: none; /* Prevent interaction when hidden */
+}
+
+/* Show dropdown when hovering over the wrapper (which contains both button and dropdown) */
+.dropdownWrapper:hover .dropdownContainer {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto; /* Enable interaction when visible */
+}
+
 .dropdownContainer {
-    /* background: var(--background); */
-    /* color: #fff; */
     background: #fcfcfc;
     position: absolute;
-    top: calc(60 / 1440 * 100vw);
+    top: 100%;
+    right: 0;
+    width: calc(800 / 1440 * 100vw);
     padding: calc(30 / 1440 * 100vw);
-    width: 70%;
-    right: calc(20 / 1440 * 100vw);
     border-radius: calc(10 / 1440 * 100vw);
     box-shadow: 0 calc(4 / 1440 * 100vw) calc(20 / 1440 * 100vw) rgba(0, 0, 0, 0.1),
         0 calc(2 / 1440 * 100vw) calc(8 / 1440 * 100vw) rgba(0, 0, 0, 0.06);
+    z-index: 100;
+    margin-top: calc(10 / 1440 * 100vw);
+}
 
-
+/* Optional: Add a small arrow pointer */
+.dropdownContainer::before {
+    content: '';
+    position: absolute;
+    top: calc(-6 / 1440 * 100vw);
+    right: calc(20 / 1440 * 100vw);
+    width: calc(12 / 1440 * 100vw);
+    height: calc(12 / 1440 * 100vw);
+    background: #fcfcfc;
+    transform: rotate(45deg);
+    box-shadow: -2px -2px 5px rgba(0, 0, 0, 0.06);
 }
 
 .dropdownContent {
@@ -72,8 +109,6 @@
     flex-wrap: wrap;
     gap: calc(15 / 1440 * 100vw);
 }
-
-
 
 .dropdownItem {
     background: #fff;
@@ -126,4 +161,3 @@
     align-items: center;
     justify-content: center;
 }
-

@@ -8,7 +8,6 @@ import { functionTypes, routes } from '@/app/constants/util';
 import { useCategories } from '@/app/stateManagement/useCategories';
 import DropdownCard from './dropdownCard';
 
-
 export default function Header() {
     const path = usePathname();
     const router = useRouter();
@@ -32,13 +31,25 @@ export default function Header() {
                         };
                     }
 
-                    const isActive = i.route === path
+                    const isActive = i.route === path;
+                    const isDropdown = i.name === 'follow us';
+
                     return (
-                        <button onClick={f} style={{ background: i.background, color: i.color }} className={`${classes.button} ${i.background ? classes.padded : ''} ${isActive ? classes.activeRoute : ''}`} key={id}>{i.name}</button>
+                        <div key={id} className={`${classes.buttonWrapper} ${isDropdown ? classes.dropdownWrapper : ''}`}>
+                            <button 
+                                onClick={f} 
+                                style={{ background: i.background, color: i.color }} 
+                                className={`${classes.button} ${i.background ? classes.padded : ''} ${isActive ? classes.activeRoute : ''}`} 
+                            >
+                                {i.name}
+                            </button>
+                            
+                            {/* Always render DropdownCard inside the same wrapper */}
+                            {isDropdown && <DropdownCard />}
+                        </div>
                     )
                 })}
             </div>
-            <DropdownCard />
         </header>
     )
 }
